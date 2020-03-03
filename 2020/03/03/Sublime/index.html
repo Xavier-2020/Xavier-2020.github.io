@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/03/03/Sublime/setting.png">
 <meta property="og:image" content="http://yoursite.com/2020/03/03/Sublime/control.png">
 <meta property="og:image" content="http://yoursite.com/2020/03/03/Sublime/highlight.png">
-<meta property="og:updated_time" content="2020-03-03T14:50:13.870Z">
+<meta property="og:updated_time" content="2020-03-03T15:10:44.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime Text3使用Package Control 报错There Are No Packages Available For Installation">
 <meta name="twitter:description" content="最近想到用一款流行的代码编辑器软件Sublime Text，它拥有丰富并且功能强大的插件，界面整洁美观、文本功能强大，且运行速度极快，非常适合编写代码，写文章做笔记。Sublime Text还支持Mac、Windows和Linux各大平台，用过的人都说好。">
@@ -401,19 +401,21 @@
       
 
       
-        <p>最近想到用一款流行的代码编辑器软件Sublime Text，它拥有丰富并且功能强大的插件，界面整洁美观、文本功能强大，且运行速度极快，非常适合编写代码，写文章做笔记。Sublime Text还支持Mac、Windows和Linux各大平台，用过的人都说好。<br><a id="more"></a></p>
-<p>Sublime Text的下载地址：<a href="http://www.sublimetextcn.com/" target="_blank" rel="noopener">http://www.sublimetextcn.com/</a></p>
-<p>安装完成Sublime Test3后，3的版本中自带了Package Control插件，于是我便想直接利用自带的这个插件来安装HighLight，<br>结果便报错了：<strong>“There Are No Packages Available For Installation”</strong><br><img src="error.png" alt="avatar"><br>网上查找了一下，有不同的原因，例如：</p>
+        <p>最近想到用一款流行的代码编辑器软件<strong>Sublime Text</strong>，它拥有丰富并且功能强大的插件，界面整洁美观、文本功能强大，且运行速度极快，非常适合编写代码，写文章做笔记。Sublime Text还支持Mac、Windows和Linux各大平台，用过的人都说好。<br><a id="more"></a></p>
+<p>Sublime Text的下载地址：<font color="Blue"><a href="http://www.sublimetextcn.com/" target="_blank" rel="noopener">http://www.sublimetextcn.com/</a></font></p>
+<p>安装完成Sublime Test3后，3的版本中自带了Package Control插件，于是我便想直接利用自带的这个插件来安装HighLight，结果便报错了：<strong>“There Are No Packages Available For Installation”</strong><br><img src="error.png" alt="avatar"></p>
+<p>##网上查找了一下，有不同的原因，例如：</p>
 <ul>
-<li>Intent服务提供者（ISP）不支持IPv6就会引发上述错误</li>
-<li>因为访问不到 json 文件（<a href="https://packagecontrol.io/channel_v3.json" target="_blank" rel="noopener">https://packagecontrol.io/channel_v3.json</a>）导致</li>
-<li>package control 不可用</li>
+<li>Intent服务提供者（ISP）不支持IPv6就会引发上述错误。</li>
+<li>因为访问不到 json 文件（<font color="Blue"><a href="https://packagecontrol.io/channel_v3.json" target="_blank" rel="noopener">https://packagecontrol.io/channel_v3.json</a></font>）导致。</li>
+<li>package control 不可用。</li>
 </ul>
-<p>第一个原因处理办法：<br>1.WIN+R输入cmd打开命令行窗口；<br>2.在命令行窗口里输入ping sublime.wbond.net，获得一个ip地址<br>3.打开本机C:\Windows\system32\drivers\etc 目录下 host文件在最后新增一行，内容如下：50.116.34.243       sublime.wbond.net，然后回车保存，（修改host文件需管理员权限，如果不能在该目录下修改，也可以复制到桌面上修改后直接覆盖再改目录下，并确定使用管理员权限即可）</p>
+<p>第一个原因处理办法：<br>1.WIN+R输入cmd打开命令行窗口；<br>2.在命令行窗口里输入ping sublime.wbond.net，获得一个ip地址<br>3.打开本机C:\Windows\system32\drivers\etc 目录下 host文件在最后新增一行，内容如下：50.116.34.243  sublime.wbond.net，然后回车保存，（修改host文件需管理员权限，如果不能在该目录下修改，也可以复制到桌面上修改后直接覆盖再改目录下，并确定使用管理员权限即可）</p>
 <p>亲测无效之后，开始尝试看看是不是第二种原因导致的。</p>
-<p>第二个解决方案：<br>1.打开Sublime Text，点击 首选项-&gt;插件设置-&gt;Package Control -&gt;Setting Default（设置-默认），<br><img src="setting.png" alt="avatar"><br>可以看到该文件是放置在网络中进行读取的。<br>2.访问地址：<a href="https://sublime.wbond.net/channel.json" target="_blank" rel="noopener">https://sublime.wbond.net/channel.json</a>，能够正常打开，切换到了其他正常的源，保存后仍然是提示同样的报错信息</p>
-<p>剩下第三个解决办法，具体步骤：<br>1.下载一个新的Package Control下载网址：<a href="https://github.com/wbond/package_control" target="_blank" rel="noopener">https://github.com/wbond/package_control</a>，电脑如果安装了Git，可以在git bash窗口使用命令”git clone <a href="https://github.com/wbond/package_control&quot;下载" target="_blank" rel="noopener">https://github.com/wbond/package_control&quot;下载</a><br>2.下载完之后，将文件夹重新命名为：Package Control<br>3.打开Sublime，点击：首选项-&gt;浏览程序包，便会打开一个文件夹！然后删除这个文件夹中已有的”Package Control文件夹”，将刚才下载好的并且重新命名的Package Control复制到该文件夹下，然后重新启动Sublime，果然成功了！</p>
-<p>Package Control安装成功后，下面利用Package Control安装SublimeHighLight插件！！！<br>打开Sublime后按快捷键“Ctrl+shift+p”,便会出现下面界面：<br><img src="control.png" alt="avatar"><br>点击Add Repository，然后在右下出弹出的框里填入此网址：<br><a href="https://github.com/n1k0/SublimeHighlight/tree/python3" target="_blank" rel="noopener">https://github.com/n1k0/SublimeHighlight/tree/python3</a><br>并按Enter键<br>4.使用快捷键“Ctrl+shift+P”，点击Install Package，在弹出的输入框中输入SublimeHighLight，然后点击安装<br><img src="highlight.png" alt="avatar"><br>过一会Sublime左下方便会显示安装成功。然后重启Sublime，SublimeHighLight插件便可以使用了！ </p>
+<p>第二个解决方案：<br>1.打开Sublime Text，点击 <strong>首选项-&gt;插件设置-&gt;Package Control -&gt;Setting Default（设置-默认）</strong>，<br><img src="setting.png" alt="avatar"><br>可以看到该文件是放置在网络中进行读取的。<br>2.访问地址：<font color="Blue"><a href="https://sublime.wbond.net/channel.json" target="_blank" rel="noopener">https://sublime.wbond.net/channel.json</a></font>，能够正常打开，切换到了其他正常的源，保存后仍然是提示同样的报错信息。</p>
+<h2 id="剩下第三个解决办法，具体步骤："><a href="#剩下第三个解决办法，具体步骤：" class="headerlink" title="剩下第三个解决办法，具体步骤："></a>剩下第三个解决办法，具体步骤：</h2><p>1.下载一个新的Package Control下载网址：<font color="Blue"><a href="https://github.com/wbond/package_control" target="_blank" rel="noopener">https://github.com/wbond/package_control</a></font>，电脑如果安装了Git，可以在git bash窗口使用命令”git clone <a href="https://github.com/wbond/package_control&quot;下载" target="_blank" rel="noopener">https://github.com/wbond/package_control&quot;下载</a><br>2.下载完之后，将文件夹重新命名为：<strong>Package Control</strong><br>3.打开Sublime，点击：首选项-&gt;浏览程序包，便会打开一个文件夹！然后删除这个文件夹中已有的”Package Control文件夹”，将刚才下载好的并且重新命名的Package Control复制到该文件夹下，然后重新启动Sublime，果然成功了！</p>
+<p>Package Control安装成功后，下面利用Package Control安装<strong>SublimeHighLight</strong>插件！！！<br>打开Sublime后按快捷键“Ctrl+shift+P”,便会出现下面界面：<br><img src="control.png" alt="avatar"><br>点击Add Repository，然后在右下出弹出的框里填入此网址： </p>
+<p><font color="Blue"><a href="https://github.com/n1k0/SublimeHighlight/tree/python3" target="_blank" rel="noopener">https://github.com/n1k0/SublimeHighlight/tree/python3</a></font><br>并按Enter键<br>4.使用快捷键“Ctrl+shift+P”，点击Install Package，在弹出的输入框中输入SublimeHighLight，然后点击安装<br><img src="highlight.png" alt="avatar"><br>过一会Sublime左下方便会显示安装成功。然后重启Sublime，SublimeHighLight插件便可以使用了！ </p>
 
       
     </div>
@@ -533,8 +535,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -608,6 +619,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#剩下第三个解决办法，具体步骤："><span class="nav-number">1.</span> <span class="nav-text">剩下第三个解决办法，具体步骤：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
