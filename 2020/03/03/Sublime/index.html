@@ -83,19 +83,19 @@
 <meta name="keywords" content="工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sublime Text3使用Package Control 报错There Are No Packages Available For Installation">
-<meta property="og:url" content="http://yoursite.com/2020/03/03/Sublime/index.html">
+<meta property="og:url" content="https://github.com/Xavier-2020/2020/03/03/Sublime/index.html">
 <meta property="og:site_name" content="Xavier&#39;s Blog">
 <meta property="og:description" content="最近想到用一款流行的代码编辑器软件Sublime Text，它拥有丰富并且功能强大的插件，界面整洁美观、文本功能强大，且运行速度极快，非常适合编写代码，写文章做笔记。Sublime Text还支持Mac、Windows和Linux各大平台，用过的人都说好。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/03/03/Sublime/error.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/03/Sublime/setting.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/03/Sublime/control.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/03/Sublime/highlight.png">
+<meta property="og:image" content="https://github.com/Xavier-2020/2020/03/03/Sublime/error.png">
+<meta property="og:image" content="https://github.com/Xavier-2020/2020/03/03/Sublime/setting.png">
+<meta property="og:image" content="https://github.com/Xavier-2020/2020/03/03/Sublime/control.png">
+<meta property="og:image" content="https://github.com/Xavier-2020/2020/03/03/Sublime/highlight.png">
 <meta property="og:updated_time" content="2020-03-03T15:10:44.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime Text3使用Package Control 报错There Are No Packages Available For Installation">
 <meta name="twitter:description" content="最近想到用一款流行的代码编辑器软件Sublime Text，它拥有丰富并且功能强大的插件，界面整洁美观、文本功能强大，且运行速度极快，非常适合编写代码，写文章做笔记。Sublime Text还支持Mac、Windows和Linux各大平台，用过的人都说好。">
-<meta name="twitter:image" content="http://yoursite.com/2020/03/03/Sublime/error.png">
+<meta name="twitter:image" content="https://github.com/Xavier-2020/2020/03/03/Sublime/error.png">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/03/Sublime/"/>
+  <link rel="canonical" href="https://github.com/Xavier-2020/2020/03/03/Sublime/"/>
 
 
 
@@ -312,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/03/Sublime/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Xavier-2020/2020/03/03/Sublime/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xavier">
@@ -413,9 +413,9 @@
 <p>第一个原因处理办法：<br>1.WIN+R输入cmd打开命令行窗口；<br>2.在命令行窗口里输入ping sublime.wbond.net，获得一个ip地址<br>3.打开本机C:\Windows\system32\drivers\etc 目录下 host文件在最后新增一行，内容如下：50.116.34.243  sublime.wbond.net，然后回车保存，（修改host文件需管理员权限，如果不能在该目录下修改，也可以复制到桌面上修改后直接覆盖再改目录下，并确定使用管理员权限即可）</p>
 <p>亲测无效之后，开始尝试看看是不是第二种原因导致的。</p>
 <p>第二个解决方案：<br>1.打开Sublime Text，点击 <strong>首选项-&gt;插件设置-&gt;Package Control -&gt;Setting Default（设置-默认）</strong>，<br><img src="setting.png" alt="avatar"><br>可以看到该文件是放置在网络中进行读取的。<br>2.访问地址：<font color="Blue"><a href="https://sublime.wbond.net/channel.json" target="_blank" rel="noopener">https://sublime.wbond.net/channel.json</a></font>，能够正常打开，切换到了其他正常的源，保存后仍然是提示同样的报错信息。</p>
-<h2 id="剩下第三个解决办法，具体步骤："><a href="#剩下第三个解决办法，具体步骤：" class="headerlink" title="剩下第三个解决办法，具体步骤："></a>剩下第三个解决办法，具体步骤：</h2><p>1.下载一个新的Package Control下载网址：<font color="Blue"><a href="https://github.com/wbond/package_control" target="_blank" rel="noopener">https://github.com/wbond/package_control</a></font>，电脑如果安装了Git，可以在git bash窗口使用命令”git clone <a href="https://github.com/wbond/package_control&quot;下载" target="_blank" rel="noopener">https://github.com/wbond/package_control&quot;下载</a><br>2.下载完之后，将文件夹重新命名为：<strong>Package Control</strong><br>3.打开Sublime，点击：首选项-&gt;浏览程序包，便会打开一个文件夹！然后删除这个文件夹中已有的”Package Control文件夹”，将刚才下载好的并且重新命名的Package Control复制到该文件夹下，然后重新启动Sublime，果然成功了！</p>
+<h2 id="剩下第三个解决办法，具体步骤："><a href="#剩下第三个解决办法，具体步骤：" class="headerlink" title="剩下第三个解决办法，具体步骤："></a>剩下第三个解决办法，具体步骤：</h2><p>1.下载一个新的Package Control下载网址：<font color="Blue"><a href="https://github.com/wbond/package_control">https://github.com/wbond/package_control</a></font>，电脑如果安装了Git，可以在git bash窗口使用命令”git clone <a href="https://github.com/wbond/package_control&quot;下载">https://github.com/wbond/package_control&quot;下载</a><br>2.下载完之后，将文件夹重新命名为：<strong>Package Control</strong><br>3.打开Sublime，点击：首选项-&gt;浏览程序包，便会打开一个文件夹！然后删除这个文件夹中已有的”Package Control文件夹”，将刚才下载好的并且重新命名的Package Control复制到该文件夹下，然后重新启动Sublime，果然成功了！</p>
 <p>Package Control安装成功后，下面利用Package Control安装<strong>SublimeHighLight</strong>插件！！！<br>打开Sublime后按快捷键“Ctrl+shift+P”,便会出现下面界面：<br><img src="control.png" alt="avatar"><br>点击Add Repository，然后在右下出弹出的框里填入此网址： </p>
-<p><font color="Blue"><a href="https://github.com/n1k0/SublimeHighlight/tree/python3" target="_blank" rel="noopener">https://github.com/n1k0/SublimeHighlight/tree/python3</a></font><br>并按Enter键<br>4.使用快捷键“Ctrl+shift+P”，点击Install Package，在弹出的输入框中输入SublimeHighLight，然后点击安装<br><img src="highlight.png" alt="avatar"><br>过一会Sublime左下方便会显示安装成功。然后重启Sublime，SublimeHighLight插件便可以使用了！ </p>
+<p><font color="Blue"><a href="https://github.com/n1k0/SublimeHighlight/tree/python3">https://github.com/n1k0/SublimeHighlight/tree/python3</a></font><br>并按Enter键<br>4.使用快捷键“Ctrl+shift+P”，点击Install Package，在弹出的输入框中输入SublimeHighLight，然后点击安装<br><img src="highlight.png" alt="avatar"><br>过一会Sublime左下方便会显示安装成功。然后重启Sublime，SublimeHighLight插件便可以使用了！ </p>
 
       
     </div>
